@@ -1,0 +1,133 @@
+<html  lang="en">
+  <head> 
+    <title>Rondo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="dtsb-modified.css">
+    <link rel="stylesheet" href="rondo.css">
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-1.13.8/sb-1.6.0/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+    <script src="rondo.js"></script>
+    <!-- SheetJS (XLSX) -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo-dd.png">
+
+  </head>
+
+  <body>
+    <header class="top-header">
+      <div class="container top">
+      <hgroup>
+        <h1 id='head'></h1>
+        <h2 id='subhead'></h2>
+      </hgroup>
+
+      <nav>
+             <ul>
+               <li>
+                 <details>
+                   <summary >Menu</summary>
+                   <ul id="pages">
+                   </ul>
+                 </details>
+               </li>
+             </ul>
+           </nav>
+         </div>
+    </header>
+    <section aria-label="Featured Content">
+      <figure class='container-fluid hero'>
+      </figure>
+
+    </section>
+    <!-- Home Intro (shows only on the homepage) -->
+    <section id="intro" hidden>
+      <article id="home-article">
+      </article>
+    </section>
+
+
+    <main class="container" aria-busy="true">
+
+      <section id="pages-container">
+
+
+      </section>
+
+
+
+    <section id="collection">
+      <article>
+        <header>
+            <button class='show-all'>Show All Items</button>
+            <h2 class='items-head'>Items</h2>
+        </header>
+      <table id="items" class="" style="width:100%"></table>
+    </article>
+    </section>
+    </main>
+
+    <dialog class="item-modal">
+    <article>
+      <header>
+        <a href="#close" aria-label="Close" class="close"></a>
+        <h3 id='modal-title'>Modal title</h3>
+    </header>
+    <figure class="modal-image">
+
+    </figure>
+    <p>
+      <dl>
+        <dt>Date</dt>
+        <dd class='rowDate'></dd>
+
+        <dt>Creator</dt>
+        <dd class='rowCreator'></dd>
+
+        <dt>Description</dt>
+        <dd class='rowDescription'></dd>
+
+        <dt>Commentary</dt>
+        <dd class='rowCommentary'></dd>
+
+        <dt>Coverage</dt>
+        <dd class='rowCoverage'></dd>
+
+        <dt>Format</dt>
+        <dd class='rowFormat'></dd>
+
+        <dt>Language</dt>
+        <dd class='rowLanguage'></dd>
+
+        <dt>Related Resource</dt>
+        <dd class='rowRelation'></dd>
+
+        <dt>Rights</dt>
+        <dd class='rowRights'></dd>
+
+        <dt>Subject</dt>
+        <dd class='rowSubject'></dd>
+
+        <dt>Type</dt>
+        <dd class='rowType'></dd>
+
+        <dt>More Information</dt>
+        <dd class='rowURL'></dd>
+
+      </dl>
+    </p>
+      <footer>
+
+      </footer>
+    </article>
+  </dialog>
+
+
+  <footer class="container">
+      <small>Powered by Rondo</small>
+  </body>
+
+<html>

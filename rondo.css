@@ -1,0 +1,411 @@
+
+body {
+  padding-top:100px;
+  /* background-color: #F5E1C8; */
+}
+
+body header {
+  padding-bottom: 0px;
+}
+
+body main {
+  padding-top: 0px;
+}
+
+
+kbd {
+  background-color: transparent;
+  color:inherit;
+}
+
+.center {
+  text-align: center;
+}
+
+.diagram {
+  margin: auto;
+}
+
+article {
+}
+
+#pages-container article header {
+
+}
+
+@media (max-width: 991px){
+  .diagram {
+    transform: rotate(90deg);
+    margin:30px auto;
+  }
+}
+header.top-header {
+  position: fixed;
+  top:0;
+  z-index: 1100;
+  /* background-color: #E3C9A3; */
+  background-color: #fff;
+  padding-top:10px;
+  padding-bottom: 10px;
+  -webkit-box-shadow: 0px 4px 16px 8px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 4px 16px 8px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 16px 8px rgba(0,0,0,0.1);
+  
+}
+
+div.top {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+}
+hgroup {
+  margin-bottom: 0;
+}
+hgroup *, .include-item, #collection tr {
+  cursor: pointer;
+}
+
+.header-image {
+  max-width: 50%;
+  max-height: 100px;
+}
+
+header.top nav {
+  margin-left: auto;
+}
+
+
+ul#pages {
+  left:auto;
+}
+
+.subpage-menu {
+  display: block;
+}
+
+.subpage-menu li {
+  display: block;
+}
+figure.hero {
+  display:none
+  ;
+}
+
+.hero figcaption {
+  text-align: right;
+}
+
+#pages-container, #collection {
+  display: none;
+}
+
+#pages-container article {
+  display: none;
+}
+
+#pages-container article:nth-child(1) {
+  display:block;
+}
+
+.parentLink {
+  float:right;
+}
+
+#pages-container figure img {
+  max-height: 500px;
+}
+
+#pages-container footer {
+  display: flex;
+}
+button.page-nav {
+  width: 25%;
+}
+button.previous-page {
+
+}
+button.next-page {
+  margin-left: auto;
+}
+
+
+.show-all {
+  width: 25%;
+  float: right;
+}
+
+.advanced {
+  margin:1%;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  float: left;
+  text-align: left;
+  margin: 0.5%;
+  width:99%;
+}
+
+#items thead {
+  display:none;
+}
+
+#items tbody {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+#items tr {
+  flex-basis:48%;
+  flex-wrap: wrap;
+  margin:1%;
+  background-color: #ffffff;
+  /* border: 1px solid #000000; */
+  border: 1px solid #aaaaaa;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#items td {
+  display: block;
+  background-color: #ffffff;
+  border: 0px;
+}
+
+#items td.thumbnail {
+  max-width: 150px;
+}
+.dataTables_info {
+  padding:20px;
+}
+
+.dataTables_paginate {
+}
+
+.dataTables_paginate, .dataTables_paginate span {
+  display: flex;
+}
+.dataTables_paginate a, .dataTables_paginate span a{
+  padding:20px;
+  text-align: center;
+}
+
+/* === Intro section (homepage only) === */
+#intro[hidden] { display: none !important; }
+#intro {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+#intro #home-article{
+  background: #FFF6EA;
+  border: 1px solid #E2D2B8;
+  border-radius: 16px;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+#intro #home-article header{
+  border-bottom: 1px solid #E2D2B8;
+  padding-bottom: .5rem;
+  margin-bottom: 1rem;
+}
+#intro #home-article h2{
+  margin: 0;
+}
+/* Optional: images inside page body look neat */
+#pages-container article figure{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+
+dialog { z-index: 2001; }              /* keep dialog above the fixed header */
+dialog::backdrop { background: rgba(0,0,0,.35); }
+
+/* updates */
+
+
+/* Force light background regardless of OS dark mode */
+html, body {
+  background-color: #ffffff !important;
+  color-scheme: light !important;
+}
+
+/* Fix Pico dark article cards */
+#pages-container article,
+#collection > article {
+  background: #ffffff !important;
+  color: #3a2e22 !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+/* Fix dark header/footer strips inside articles */
+#pages-container article > header,
+#pages-container article > footer,
+#collection > article > header {
+  background: #ffffff !important;
+  color: #3a2e22 !important;
+  border-color: #ffffff !important;
+}
+
+/* Fix heading text inside article headers (Items, page titles) */
+#pages-container article > header h2,
+#collection > article > header h2,
+#collection > article > header .items-head {
+  color: #3a2e22 !important;
+  opacity: 1 !important;
+}
+
+/* Fix dark body area inside articles */
+#pages-container article > *:not(header):not(footer) {
+  background: #ffffff !important;
+  color: #3a2e22 !important;
+}
+
+/* Fix ALL text inside page content (including faded nested list items) */
+#pages-container article p,
+#pages-container article li,
+#pages-container article ul,
+#pages-container article ol,
+#pages-container article h1,
+#pages-container article h2,
+#pages-container article h3,
+#pages-container article h4,
+#pages-container article h5,
+#pages-container article h6 {
+  color: #3a2e22 !important;
+  opacity: 1 !important;
+}
+
+/* Fix items grid background */
+#items tbody,
+#items td,
+.dataTables_info,
+.dataTables_paginate,
+.dataTables_paginate span {
+  background: #ffffff !important;
+  color: #3a2e22 !important;
+}
+
+/* Fix ALL dark inputs, textareas, selects site-wide */
+input,
+textarea,
+select,
+input[type="search"],
+input[type="text"] {
+  background-color: #ffffff !important;
+  color: #3a2e22 !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 8px !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ffffff !important;
+}
+
+.dataTables_filter label {
+  color: #3a2e22 !important;
+}
+
+/* === Navbar dropdown fix === */
+
+/* Hide the flat ul#pages — it should only show inside the dropdown */
+header.top-header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+header.top-header nav > ul > li {
+  position: relative;
+}
+
+/* Style the summary as a proper Menu button */
+header.top-header nav details summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #3a2e22;
+  background: #fff;
+  list-style: none;
+  white-space: nowrap;
+}
+header.top-header nav details summary::-webkit-details-marker { display: none; }
+header.top-header nav details summary::after {
+  content: " ";
+  font-size: 0.75em;
+}
+header.top-header nav details[open] summary::after {
+  content: " ";
+}
+
+/* Dropdown panel */
+header.top-header nav details[open] > ul#pages {
+  display: block !important;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  min-width: 220px;
+  background: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 0.4rem 0;
+  z-index: 1200;
+  list-style: none;
+  margin: 0;
+}
+
+/* Hide the ul when details is closed */
+header.top-header nav details:not([open]) > ul#pages {
+  display: none !important;
+}
+
+/* Dropdown items */
+ul#pages li {
+  display: block !important;
+  padding: 0;
+}
+
+ul#pages li a {
+  display: block;
+  padding: 0.55rem 1.2rem;
+  color: #3a2e22 !important;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.15s;
+}
+
+ul#pages li a:hover {
+  background: #ffffff;
+  color: #C8692A !important;
+}
+
+/* Subpage indent */
+ul#pages ul.subpage-menu {
+  display: block !important;
+  padding-left: 1rem;
+}
+
+ul#pages ul.subpage-menu li a {
+  font-size: 0.88rem;
+  color: #7a6a58 !important;
+  padding: 0.4rem 1.2rem;
+}
+
+/* Fix footer text color */
+footer small, footer {
+  color: #3a2e22 !important;
+  opacity: 1 !important;
+}
